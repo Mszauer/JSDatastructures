@@ -28,7 +28,7 @@ function LinkedList(){
 				head = node; //set head to new node
 			} else{
 				let current = head; //start of the list
-				for (let i = 0 ; i < length ; i++){ //loop until spot before insertion point
+				for (let i = 0 ; i < position ; i++){ //loop until spot before insertion point
 					current = current.next; //move onto next element
 				}
 				node.next = current.next; //set previous nodes.next to new nodes.next
