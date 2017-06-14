@@ -13,7 +13,7 @@ function hasLoop(Node linkedList){
 		}
 		pointerA = pointerA.next;
 		pointerB = pointerB.next.next;
-		if (pointerA.next == null || pointerB.next.next == null){
+		if (!pointerA.next|| !pointerB.next || !pointerB.next.next){
 			return false;
 		}
 	}
