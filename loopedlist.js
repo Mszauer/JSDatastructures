@@ -1,10 +1,9 @@
 // Leapfrog solution to finding out if a linked list is looping or not. Also known as Floyd’s Cycle-Finding Algorithm
 function hasLoop(Node linkedList){
 	// FIND THE LOOP
-	if (!linkedList.head){
+	if (!linkedList.head || !linkedList.head.next){
 		return false;
 	} 
-
 	let pointerA = head.next;
 	let pointerB = head.next.next;
 
