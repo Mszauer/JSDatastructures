@@ -9,6 +9,9 @@ function hasLoop(Node linkedList){
 	let pointerB = head.next.next;
 
 	while (pointerA !== pointerB){
+		if (!pointerA || !pointerB){
+			return false
+		}
 		pointerA = pointerA.next;
 		pointerB = pointerB.next.next;
 		if (pointerA.next == null || pointerB.next.next == null){
@@ -34,4 +37,6 @@ function hasLoop(Node linkedList){
 	}	
 	pointerC.next = null;
 	linkedList.tail = pointerC;
+
+	return true;
 }
